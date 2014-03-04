@@ -1,0 +1,20 @@
+<div class="header">
+  <i class="icon icon-github"></i>
+  <h1 class="title" data-bind="title"></h1>
+</div>
+
+<li class="content-area" data-foreach-item="items">
+  <div class="commit-container">
+    <p class="ago" data-bind="item.ago"></p>
+    <div class="avatar">
+      <img data-bind-src="item.avatar_url">
+    </div>
+    <div class="gh-feed-title-message">
+      <i class="gh-feed-title" data-bind="item.title"></i>
+      <div class="gh-feed-message">
+        <pre data-bind="item.message"></pre>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</li>

@@ -1,0 +1,5 @@
+org:
+  repositories:
+    ci_travis_xtuple: xtuple/xtuple
+    ci_travis_xtuple_extensions: xtuple/xtuple-extensions
+  type: org
