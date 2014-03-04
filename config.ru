@@ -7,11 +7,6 @@ else
   Dotenv.load
 end
 
-ENV['TWITTER_CONSUMER_KEY']
-ENV['TWITTER_CONSUMER_SECRET']
-ENV['TWITTER_ACCESS_TOKEN']
-ENV['TWITTER_ACCESS_TOKEN_SECRET']
-
 configure do
   set :auth_token, 'YOUR_AUTH_TOKEN'
 

@@ -1,4 +1,7 @@
 require 'twitter'
+require 'dotenv'
+
+Dotenv.load
 
 #### Get your twitter keys & secrets:
 #### https://dev.twitter.com/docs/auth/tokens-devtwittercom

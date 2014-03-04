@@ -1,6 +1,8 @@
 # coding: utf-8
-
 require "faraday"
+require 'dotenv'
+
+Dotenv.load
 
 def symbolize_keys(hash)
   hash.inject({}){|new_hash, key_value|
@@ -106,7 +108,7 @@ end
 user         = ENV['GITHUB_USER']
 org          = ENV['GITHUB_ORG']
 token        = ENV['GITHUB_TOKEN']
-hist_size    = ENV['GITHUB_HIST_SIZE']
+hist_size    = 2
 
 SCHEDULER.every '30s', :first_in => 0 do
   feed = GithubFeed.new(user, org, token)
