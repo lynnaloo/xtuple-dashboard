@@ -1,1 +1,1 @@
-Check out http://shopify.github.com/dashing for more information.
+Dashing dashboards for xTuple
