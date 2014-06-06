@@ -2,3 +2,5 @@
 history.yml
 .env
 !.env.sample
+rails
+.vagrant
