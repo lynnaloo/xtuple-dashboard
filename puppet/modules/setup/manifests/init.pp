@@ -1,6 +1,6 @@
 # inspired by https://github.com/rails/rails-dev-box/blob/master/puppet/manifests/default.pp
 
-class setup($ruby_version = "2.1.1") {
+class setup($ruby_version = "2.0") {
 
   $ar_databases = ['activerecord_unittest', 'activerecord_unittest2']
   $as_vagrant   = 'sudo -u vagrant -H bash -l -c'
@@ -41,6 +41,11 @@ class setup($ruby_version = "2.1.1") {
 
   # Nokogiri dependencies.
   package { ['libxml2', 'libxml2-dev', 'libxslt1-dev']:
+    ensure => installed
+  }
+
+  # ExecJS runtime.
+  package { 'nodejs':
     ensure => installed
   }
 

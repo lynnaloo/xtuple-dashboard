@@ -50,5 +50,5 @@ Start the datasource:
 
 ### xTuple Dashboard
 
-Launch your local browser and navigate to application using localhost `http://localhost:3000`
-or the static IP Address of the virtual machine `http://192.168.33.12:3000`
+Launch your local browser and navigate to application using localhost `http://localhost:3030`
+or the static IP Address of the virtual machine `http://192.168.33.12:3030`

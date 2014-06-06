@@ -1,4 +1,4 @@
-$ruby_version = "2.1.1"
+$ruby_version = "2.0"
 
 file { '/etc/motd':
 	content => "
