@@ -42,22 +42,15 @@ Connect to the virtual machine via ssh:
 
     host $ vagrant ssh
 
-Bundle the Ruby gems
+Bundle the Ruby gems:
 
     vagrant $ cd xtuple-dashboard
     vagrant $ bundle install
 
-Setup environment variables
+Setup environment variables:
 
-    * Make a copy of the `.env.sample` file named `.env` in the project root
-    * Edit the `.env` file and enter the required tokens
-
-    How to create the required access tokens:
-    * Github
-        [Generating a Github Access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use)
-
-    * Travis-CI
-        vagrant $ travis login --pro && travis token --pro
+* Make a copy of the `.env.sample` file named `.env` in the project root
+* Edit the `.env` file and enter the required tokens
 
 Start the xTuple Dashboard server
 
