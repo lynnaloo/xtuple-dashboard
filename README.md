@@ -49,8 +49,8 @@ Bundle the Ruby gems
 
 Setup environment variables
 
-    Make a copy of the `.env.sample` file named `.env` in the project root
-    Edit the `.env` file and enter the required tokens
+    * Make a copy of the `.env.sample` file named `.env` in the project root
+    * Edit the `.env` file and enter the required tokens
 
     How to create the required access tokens:
     * Github
