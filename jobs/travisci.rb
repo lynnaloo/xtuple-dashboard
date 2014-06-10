@@ -5,11 +5,12 @@ def update_builds(repository, config)
   builds = []
   repo = nil
 
-  if config["type"] == "pro"
-    Travis::Pro.access_token = config["auth_token"]
+  if config['type'] == 'pro'
+    # Get the Travis-CI token from the environment variable
+    Travis::Pro.access_token = ENV['TRAVIS_AUTH_TOKEN']
     repo = Travis::Pro::Repository.find(repository)
-  else  # Standard namespace
-    Travis.access_token = config["auth_token"]
+  else
+    # public repositories don't require a token
     repo = Travis::Repository.find(repository)
   end
 
