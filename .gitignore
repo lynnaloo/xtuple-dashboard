@@ -4,3 +4,4 @@ history.yml
 !.env.sample
 rails
 .vagrant
+keys
