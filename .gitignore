@@ -5,3 +5,4 @@ history.yml
 rails
 .vagrant
 keys
+*.p12

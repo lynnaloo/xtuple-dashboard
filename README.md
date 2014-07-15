@@ -49,7 +49,7 @@ Bundle the Ruby gems:
 
 Setup environment variables:
 
-* Make a copy of the `.env.sample` file named `.env` in the project root
+* Make a copy of the `sample.env` file named `.env` in the project root
 * Edit the `.env` file and enter the required tokens [HOW?](#generating-required-access-tokens)
 
 Start the xTuple Dashboard server
