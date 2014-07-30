@@ -11,12 +11,12 @@ Note: This document is for setting up a virtual environment on a Unix host.
 
 ###  Install Vagrant ###
 
-- Download and install [VirtualBox 4.3.8](https://www.virtualbox.org/wiki/Download_Old_Builds_4_3)
+- Download and install [VirtualBox 4.3.12](https://www.virtualbox.org/wiki/Downloads)
   - Do not open VirtualBox or create a virtual machine. This will be handled by Vagrant.
-- Download and install [Vagrant 1.5.0](http://www.vagrantup.com/downloads.html)
+- Download and install [Vagrant 1.6.4](http://www.vagrantup.com/downloads.html)
   - Package managers like apt-get and gem install will install an older version of Vagrant so it is required to use the download page.
 
-[Fork](http://github.com/lynnaloo/xtuple-dashboard/fork) this repository on Github.
+[Fork](http://github.com/xtuple/xtuple-dashboard/fork) this repository on Github.
 
 Clone this fork of the `xtuple-dashboard` respository to a directory on your host machine:
 
