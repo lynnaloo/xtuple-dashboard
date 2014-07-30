@@ -72,6 +72,11 @@ class setup($ruby_version = "2.0") {
     require => Exec['install_ruby']
   }
 
+  exec { 'ignore_warning' :
+    command => "${as_vagrant} 'rvm rvmrc warning ignore ${home}/xtuple-dashboard/Gemfile'",
+    require => Exec['install_rvm']
+  }
+
   # Install dashing gem
   exec { 'install_dashing':
     command => "${as_vagrant} 'gem install dashing'",
