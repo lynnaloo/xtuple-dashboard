@@ -56,14 +56,26 @@ SCHEDULER.every '1m', :first_in => 0 do
   # Ensure that the api_method is using snake versus camel-case: sales_history vs SalesHistory
   #
   result = client.execute(
-    :api_method => service.contact.list,
+    :api_method => service.incident.get,
     :parameters => {}
   )
 
-  contacts = result.data.data
+  # TODO: check for empty dataset
+  incidents = result.data.data
+  unclosed = [], unconfirmed = []
+
+  # filter for incidents that are resolved fixed
+  incidents.each do |incident|
+    if incident['status'] == 'R' && incident['resolution'] == 'Fixed'
+      unclosed.push(incident)
+    elsif incident['status'] == 'N'
+      unconfirmed.push(incident)
+    end
+  end
 
   # Update the dashboard
-  # Note the trailing to_i - See: https://github.com/Shopify/dashing/issues/33
   # Send the data for the Contacts count
-  send_event('contacts_count', { current: contacts.size() })
+  send_event('resolved_fixed_incidents', { current: unclosed.size() })
+  send_event('new_incidents', { current: unconfirmed.size() })
+
 end
