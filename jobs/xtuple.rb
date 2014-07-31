@@ -65,5 +65,5 @@ SCHEDULER.every '1m', :first_in => 0 do
   # Update the dashboard
   # Note the trailing to_i - See: https://github.com/Shopify/dashing/issues/33
   # Send the data for the Contacts count
-  send_event('contacts_count', contacts[0].to_i)
+  send_event('contacts_count', { current: contacts.size() })
 end
