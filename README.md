@@ -65,9 +65,9 @@ or the static IP Address of the virtual machine `http://192.168.33.12:3030`
 
 Ensure you have Ruby 2.0+ installed and then run:
 
-host $ gem install dashing
-host $ bundle install
-host $ dashing start
+`host $ gem install dashing`
+`host $ bundle install`
+`host $ dashing start`
 
 ### Generating Required Access Tokens
 
