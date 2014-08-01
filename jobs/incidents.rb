@@ -28,7 +28,7 @@ client = Google::APIClient.new(
 if ENV['PRIVATE_KEY_PATH']
   key = Google::APIClient::KeyUtils.load_from_pkcs12(ENV['PRIVATE_KEY_PATH'], ENV['PRIVATE_KEY_SECRET'])
 else
-  key = OpenSSL::PKey::RSA.new ENV["PRIVATE_KEY"], ENV['PRIVATE_KEY_SECRET']
+  key = OpenSSL::PKey::RSA.new(ENV['PRIVATE_KEY'], ENV['PRIVATE_KEY_SECRET'])
 end
 
 client.authorization = Signet::OAuth2::Client.new(
