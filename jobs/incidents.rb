@@ -35,16 +35,16 @@ client.authorization = Signet::OAuth2::Client.new(
   :signing_key => key,
   :person => ENV['USERNAME'])
 
+# create discovery_uri with application version
+discovery_uri = baseUrl + '/discovery/' + ENV['APPLICATION_VERSION'] + '/apis/' + ENV['APPLICATION_VERSION'] + '/rest';
+# Register the discovery URL for xTuple REST
+client.register_discovery_uri(ENV['APPLICATION_NAME'], ENV['APPLICATION_VERSION'], discovery_uri)
+
 # Start the scheduler
-SCHEDULER.every '1m', :first_in => 0 do
+SCHEDULER.every '30s', :first_in => 0 do
 
   # Request a token for our service account
   client.authorization.fetch_access_token!
-
-  # create discovery_uri with application version
-  discovery_uri = baseUrl + '/discovery/' + ENV['APPLICATION_VERSION'] + '/apis/' + ENV['APPLICATION_VERSION'] + '/rest';
-  # Register the discovery URL for xTuple REST
-  client.register_discovery_uri(ENV['APPLICATION_NAME'], ENV['APPLICATION_VERSION'], discovery_uri)
 
   # Initialize xTuple REST API. Note this will make a request to the
   # discovery service every time.
