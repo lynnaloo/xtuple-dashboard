@@ -20,7 +20,7 @@ baseUrl = host + "/" + database
 client = Google::APIClient.new(
   :application_name => ENV['APPLICATION_NAME'],
   :application_version => ENV['APPLICATION_VERSION'],
-  :port => 8443,
+  :port => ENV['PORT'],
   :host => ENV['HOST']
 )
 
