@@ -9,10 +9,10 @@ OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 Dotenv.load
 
 database = ENV['DATABASE']
-host = "https://" + ENV['HOST']
+host = "https://" + ENV['APPLICATION_HOST']
 
-if ENV['PORT']
-  host = host + ":" + ENV['PORT']
+if ENV['APPLICATION_PORT']
+  host = host + ":" + ENV['APPLICATION_PORT']
 end
 baseUrl = host + "/" + database
 
@@ -20,8 +20,8 @@ baseUrl = host + "/" + database
 client = Google::APIClient.new(
   :application_name => ENV['APPLICATION_NAME'],
   :application_version => ENV['APPLICATION_VERSION'],
-  :port => ENV['PORT'],
-  :host => ENV['HOST']
+  :port => ENV['APPLICATION_PORT'],
+  :host => ENV['APPLICATION_HOST']
 )
 
 # Load your credentials for the service account
