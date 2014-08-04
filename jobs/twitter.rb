@@ -14,7 +14,7 @@ end
 
 search_term = URI::encode('@xtuple')
 
-SCHEDULER.every '10m', :first_in => 0 do |job|
+SCHEDULER.every '5m', :first_in => 0 do |job|
   begin
     tweets = twitter.search("#{search_term}")
 

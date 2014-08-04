@@ -28,7 +28,7 @@ end
 config_file = File.dirname(File.expand_path(__FILE__)) + '/../config/travisci.yml'
 config = YAML::load(File.open(config_file))
 
-SCHEDULER.every('2m', first_in: '1s') {
+SCHEDULER.every '2m', :first_in => '0' do
   config.each do |type, type_config|
     unless type_config["repositories"].nil?
       type_config["repositories"].each do |data_id, repo|
@@ -38,4 +38,4 @@ SCHEDULER.every('2m', first_in: '1s') {
       puts "No repositories for travis.#{type}"
     end
   end
-}
+end

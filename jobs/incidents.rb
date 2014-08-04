@@ -46,7 +46,7 @@ discovery_uri = baseUrl + '/discovery/' + ENV['APPLICATION_VERSION'] + '/apis/' 
 client.register_discovery_uri(ENV['APPLICATION_NAME'], ENV['APPLICATION_VERSION'], discovery_uri)
 
 # Start the scheduler
-SCHEDULER.every '30s', :first_in => 0 do
+SCHEDULER.every '2m', :first_in => 0 do
 
   # Request a token for our service account
   client.authorization.fetch_access_token!
