@@ -8,7 +8,7 @@ else
 end
 
 configure do
-  set :auth_token, 'YOUR_AUTH_TOKEN'
+  set :auth_token, ENV.fetch('AUTH_TOKEN')
 
   helpers do
     def protected!
