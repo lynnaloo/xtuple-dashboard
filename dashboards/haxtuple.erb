@@ -1,0 +1,20 @@
+<script type='text/javascript'>
+$(function() {
+Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":2}]')
+});
+</script>
+
+<% content_for :title do %>haxTuple Dashboard<% end %>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="logo" data-view="Image" data-image="/xtuple-app.png"
+        data-title="haxTuple Dashboard"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="leaderboard" data-view="List" data-unordered="true" data-title="Leaderboard"
+        data-moreinfo="# of bugs completed"></div>
+    </li>
+  </ul>
+</div>

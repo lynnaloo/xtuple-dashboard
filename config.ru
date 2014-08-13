@@ -8,7 +8,7 @@ else
 end
 
 configure do
-  set :auth_token, ENV.fetch('AUTH_TOKEN')
+  set :auth_token, ENV.fetch('AUTH_TOKEN', SecureRandom.uuid)
 
   helpers do
     def protected!
