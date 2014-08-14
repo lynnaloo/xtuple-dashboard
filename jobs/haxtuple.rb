@@ -3,7 +3,8 @@ SCHEDULER.every '5m' do
 
   tuplers = [
     {:label=>"Jeff Gunderson", :value=>1},
-    {:label=>"Steve Hackbarth", :value=>1}
+    {:label=>"Steve Hackbarth", :value=>1},
+    {:label=>"Mark Gummo", :value=>1}
   ]
 
   extensions = [
