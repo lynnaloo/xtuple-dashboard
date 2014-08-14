@@ -59,7 +59,7 @@ GEM
       uuidtools (>= 2.1.0)
     highline (1.6.21)
     hike (1.2.3)
-    http (0.6.1)
+    http (0.6.2)
       http_parser.rb (~> 0.6.0)
     http_parser.rb (0.6.0)
     httparty (0.13.1)
@@ -79,12 +79,14 @@ GEM
     naught (1.0.0)
     net-http-persistent (2.9.4)
     net-http-pipeline (1.0.1)
-    octokit (3.2.0)
+    octokit (3.3.0)
       sawyer (~> 0.5.3)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    puma (2.9.0)
+      rack (>= 1.1, < 2.0)
     pusher-client (0.6.0)
       json
       websocket (~> 1.0)
@@ -131,7 +133,7 @@ GEM
     thor (0.18.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    travis (1.6.16)
+    travis (1.7.1)
       addressable (~> 2.3)
       backports
       faraday (~> 0.9)
@@ -155,10 +157,10 @@ GEM
       simple_oauth (~> 0.2.0)
     typhoeus (0.6.9)
       ethon (>= 0.7.1)
-    tzinfo (1.2.1)
+    tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uuidtools (2.1.4)
-    websocket (1.1.4)
+    uuidtools (2.1.5)
+    websocket (1.2.0)
 
 PLATFORMS
   ruby
@@ -171,6 +173,7 @@ DEPENDENCIES
   httparty
   i18n
   octokit
+  puma
   rake
   travis
   twitter (>= 5.0.0)
