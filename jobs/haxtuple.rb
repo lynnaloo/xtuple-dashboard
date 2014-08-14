@@ -1,5 +1,5 @@
 
-SCHEDULER.every '5m' do
+SCHEDULER.every '10m', :first_in => 0 do
 
   # Bug fixers
   tuplers = [
