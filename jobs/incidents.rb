@@ -89,5 +89,5 @@ SCHEDULER.every '2m', :first_in => 0 do
   # Update the dashboard
   send_event('resolved_fixed_incidents', { current: unclosed.size() })
   send_event('new_incidents', { current: unconfirmed.size() })
-  send_event('leaderboard', { items: incident_counts.values })
+  #send_event('leaderboard', { items: incident_counts.values })
 end
