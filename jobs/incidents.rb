@@ -69,17 +69,11 @@ SCHEDULER.every '2m', :first_in => 0 do
   incidents = result.data.data
   unclosed = []
   unconfirmed = []
-  incident_counts = Hash.new({ value: 0 })
 
   # filter for incidents that are resolved fixed
   incidents.each do |incident|
     if incident['status'] == 'R' && incident['resolution'] == 'Fixed'
       unclosed.push(incident)
-
-      person = incident['assignedTo'] ? incident['assignedTo']['propername'] : nil
-      if person != nil
-        incident_counts[person] = { label: person, value: incident_counts[person][:value] + 1}
-      end
 
     elsif incident['status'] == 'N'
       unconfirmed.push(incident)
@@ -89,5 +83,4 @@ SCHEDULER.every '2m', :first_in => 0 do
   # Update the dashboard
   send_event('resolved_fixed_incidents', { current: unclosed.size() })
   send_event('new_incidents', { current: unconfirmed.size() })
-  #send_event('leaderboard', { items: incident_counts.values })
 end
