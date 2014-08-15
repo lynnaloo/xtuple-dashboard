@@ -3,9 +3,12 @@ SCHEDULER.every '10m', :first_in => 0 do
 
   # Bug fixers
   tuplers = [
+    {:label=>"Steve Hackbarth", :value=>3},
+    {:label=>"Gary Hartnett", :value=>2},
     {:label=>"Jeff Gunderson", :value=>1},
-    {:label=>"Steve Hackbarth", :value=>1},
-    {:label=>"Mark Gummo", :value=>1}
+    {:label=>"Mark Gummo", :value=>1},
+    {:label=>"Gil Moskowitz", :value=>1},
+    {:label=>"Ben Thompson", :value=>1}
   ]
 
   # Extension builders

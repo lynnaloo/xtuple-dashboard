@@ -4,6 +4,16 @@ Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":
 });
 </script>
 
+<script type='text/javascript'>
+$(function() {
+  $('li').live('click', function(e){
+    var widget = $(this).find('.widget');
+    var url = widget.data('link');
+    if (url) window.location = url;
+  });
+});
+</script>
+
 <% content_for :title do %>haxTuple Dashboard<% end %>
 <div class="gridster">
   <ul>
