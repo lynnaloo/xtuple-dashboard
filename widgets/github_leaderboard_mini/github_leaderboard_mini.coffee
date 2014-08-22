@@ -1,0 +1,1 @@
+class Dashing.GithubLeaderboardMini extends Dashing.GithubLeaderboard

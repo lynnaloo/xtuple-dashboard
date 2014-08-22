@@ -110,7 +110,7 @@ org          = ENV['GITHUB_ORG']
 token        = ENV['GITHUB_TOKEN']
 hist_size    = 2
 
-SCHEDULER.every '30s', :first_in => 0 do
+SCHEDULER.every '1m', :first_in => 0 do
   feed = GithubFeed.new(user, org, token)
   events = feed.events.map do |event|
     {

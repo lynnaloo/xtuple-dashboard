@@ -1,29 +1,18 @@
 <script type='text/javascript'>
 $(function() {
-Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":2},{"col":3,"row":1,"size_x":1,"size_y":2}]')
+  Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":2},{"col":3,"row":1,"size_x":1,"size_y":2}]')
+  Dashing.widget_base_dimensions = [150, 360]
+  Dashing.numColumns = 8
+  Dashing.widget_margins || [0, 0]
 });
 </script>
 
-<script type='text/javascript'>
-$(function() {
-  $('li').live('click', function(e){
-    var widget = $(this).find('.widget');
-    var url = widget.data('link');
-    if (url) window.location = url;
-  });
-});
-</script>
-
-<% content_for :title do %>haxTuple Dashboard<% end %>
+<% content_for :title do %>haxTuple Leaderboard Dashboard<% end %>
 <div class="gridster">
   <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
-      <div data-id="leaderboard" data-view="GithubLeaderboard" data-unordered="false" data-title="Leaderboard"
-        data-moreinfo="# of bugs completed"></div>
+      <div data-id="leaderboard" data-view="GithubLeaderboardMini" data-unordered="false"
+        data-title="Leaderboard" data-moreinfo="# of bugs completed"></div>
     </li>
-    <!-- <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
-      <div data-id="extensions" data-view="LinksList" data-unordered="true" data-title="Extensions"
-        data-moreinfo=""></div>
-    </li> -->
   </ul>
 </div>

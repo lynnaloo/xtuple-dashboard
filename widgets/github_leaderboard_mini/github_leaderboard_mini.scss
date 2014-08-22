@@ -1,0 +1,75 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #ec663c;
+$value-color:       #fff;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$label-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+
+// ----------------------------------------------------------------------------
+// Widget-list styles
+// ----------------------------------------------------------------------------
+.widget-github-leaderboard-mini {
+
+  background-color: $background-color;
+  vertical-align: top;
+  font-size: 12px;
+
+  &.widget {
+    padding: 0;
+    vertical-align: top;
+  }
+
+  .title {
+    color: $title-color;
+    font-size: 18px;
+  }
+
+  ol, ul {
+    margin: 0 7px;
+    text-align: left;
+    color: $label-color;
+  }
+
+  ol {
+    list-style-position: inside;
+  }
+
+  li {
+    margin-bottom: 7px;
+    vertical-align: middle;
+  }
+
+  .list-nostyle {
+    list-style: none;
+  }
+
+  .label {
+    color: $label-color;
+  }
+
+  .value {
+    float: right;
+    margin-left: 12px;
+    font-weight: 600;
+    color: $value-color;
+  }
+
+  .avatar {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+  }
+
+  .more-info {
+    color: $moreinfo-color;
+    font-size: 12px;
+  }
+}
