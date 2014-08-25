@@ -21,16 +21,6 @@ Note: This document is for setting up a virtual environment on a Unix host.
 Clone this fork of the `xtuple-dashboard` respository to a directory on your host machine:
 
     host $ git clone https://github.com/<your-github-username-here>/xtuple-dashboard.git
-    host $ cd xtuple-dashboard
-
-### Setup Vagrant ###
-
-- In the `Vagrantfile`, ensure that the `sourceDir` variable to matches the location of the cloned xTuple source code: `sourceDir = "../../dev"`
-  - This path should be relative to the location of the Vagrantfile
-
-### Install VirtualBox Guest Additions Plugin
-
-    host $ vagrant plugin install vagrant-vbguest
 
 ### Connect to the Virtual Machine ###
 
