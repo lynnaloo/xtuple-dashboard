@@ -17,6 +17,7 @@ SCHEDULER.every '2m', :first_in => 0 do |job|
     issues = github.issues.list(
       :org => org,
       :per_page => 100,
+      :auto_pagination => true,
       :filter => 'all',
       :labels => label,
       :state => 'closed'
