@@ -9,11 +9,23 @@ org    = ENV['GITHUB_ORG']
 token  = ENV['GITHUB_TOKEN']
 label  = 'haxtuple'
 
-github = Github.new(:oauth_token => token)
+github = Github.new(
+  :oauth_token => token
+)
 
-SCHEDULER.every '1m', :first_in => 0 do |job|
-    issues = github.issues.list(:org => org, :filter => 'all', :labels => label, :state => 'closed')
-    issue_counts = Hash.new({ value: 0 })
+SCHEDULER.every '2m', :first_in => 0 do |job|
+    issues = github.issues.list(
+      :org => org,
+      :per_page => 100,
+      :filter => 'all',
+      :labels => label,
+      :state => 'closed'
+    )
+    issue_counts = Hash.new(
+      {
+        value: 0
+      }
+    )
 
     issues.each do |issue|
       # we only care about pull requests
